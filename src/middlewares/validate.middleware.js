@@ -1,15 +1,8 @@
+import httpError from "../utils/httpError.js";
+
 const validate = (validator) => (req, res, next) => {
-  try {
-    const message = validator(req.body);
-    if (message) {
-      const err = new Error(message);
-      err.statusCode = 400;
-      throw err;
-    }
-    next();
-  } catch (error) {
-    next(error);
-  }
+  const message = validator(req.body);
+  next(message ? httpError(400, message) : undefined);
 };
 
 export default validate;
