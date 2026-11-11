@@ -19,6 +19,15 @@
 
 ---
 
+## About
+
+**Notes** is a simple, private note-taking web app. You create an account, log in, and keep your own notes: write a new note, read it later, edit it, or delete it. Every note belongs to the person who wrote it, and nobody else can see or change it.
+
+The project has two parts:
+
+- **Frontend:** the website you use, built with React.
+- **Backend (this repo):** the server behind it, built with Node.js and Express. It handles sign-up and login, keeps you logged in with a secure cookie, and saves your notes in a MongoDB database.
+
 ## Repositories
 
 | Part | Repository | Hosted on |
